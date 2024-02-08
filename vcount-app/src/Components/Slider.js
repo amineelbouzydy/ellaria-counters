@@ -75,8 +75,8 @@ function Slider() {
 export default Slider;
 
 const AppContainer = styled.div`
-  width: 100vw;
-  height: 40vh;
+  width: 100%;
+  height: 100%;
   color: #000000;
 
   position: relative;
@@ -95,7 +95,19 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const Text = styled.div`
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #02203c;
+`;
 
+const Note = styled.div`
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 40px;
+  color: #7c8e9a;
+`;
 
 const Marquee = styled.div`
   display: flex;
@@ -143,8 +155,8 @@ const MarqueeGroup2 = styled.div`
 const ImageGroup = styled.div`
   display: grid;
   place-items: center;
-  width: clamp(10rem, 2rem + 40vmin, 30rem);
-  padding: calc(clamp(10rem, 1rem + 10vmin, 30rem) / 10);
+  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
 `;
 
 const Image = styled.img`

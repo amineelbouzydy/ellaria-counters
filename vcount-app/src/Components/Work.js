@@ -85,7 +85,7 @@ const Work = () => {
         ))}
       </div>
       <div className="video-container">
-        <video ref={videoRef} width="640" height="360" controls autoPlay muted={isMuted}>
+        <video ref={videoRef}  height="360" controls autoPlay muted={isMuted}>
           <source src={video} type="video/mp4" />
         </video>
       </div>
