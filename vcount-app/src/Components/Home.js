@@ -25,6 +25,9 @@ const Home = () => {
           <button className="secondary-button">
           Obtenir une démo <FiArrowRight />{" "}
           </button>
+          <button className="fixed-button">
+          Obtenir une démo <FiArrowRight />{" "}
+          </button>
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" className="nanoimage"/>

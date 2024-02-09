@@ -14,8 +14,8 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
-import { FiArrowRight } from "react-icons/fi";
+
+
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -54,9 +54,7 @@ const Navbar = () => {
           <a key={item.text} href={`#${item.sectionId}`}>{item.text}</a>
         ))}
        
-        <button className="primary-button">
-          Obtenir une démo
-        </button>
+        
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
