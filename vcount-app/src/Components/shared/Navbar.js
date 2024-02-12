@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Logo from "../Assets/logo.png";
-import { BsCart2 } from "react-icons/bs";
+import { Link } from 'react-router-dom';
+import Logo from "../../Assets/logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -14,34 +14,44 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-
-
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const menuOptions = [
     {
       text: "Accueil",
       icon: <HomeIcon />,
-      sectionId: "accueil",
+      path: "/accueil",
     },
     {
       text: "A propos",
       icon: <InfoIcon />,
-      sectionId: "a-propos",
+      path: "/a-propos",
     },
     {
       text: "Avis",
       icon: <CommentRoundedIcon />,
-      sectionId: "avis",
+      path: "/avis",
     },
     {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
-      sectionId: "contact",
+      path: "/contact",
     },
-    
   ];
 
   return (
@@ -50,11 +60,35 @@ const Navbar = () => {
         <img src={Logo} alt="" className='logo' />
       </div>
       <div className='navbar-links-container'>
-        {menuOptions.map((item) => (
-          <a key={item.text} href={`#${item.sectionId}`}>{item.text}</a>
+        <Button id="fade-button"><Link key={menuOptions[0].text} to={menuOptions[0].path} className='acceuil-link'>{menuOptions[0].text}</Link></Button>
+        <Button
+          id="fade-button"
+          aria-controls={open ? 'fade-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+        >
+          Products
+        </Button>
+        <Menu
+          id="fade-menu"
+          MenuListProps={{
+            'aria-labelledby': 'fade-button',
+          }}
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          TransitionComponent={Fade}
+        >
+          <MenuItem component={Link} to="/products/nano" onClick={handleClose}>Nano</MenuItem>
+          <MenuItem component={Link} to="/products/ultima-ai" onClick={handleClose}>Ultima AI</MenuItem>
+          <MenuItem component={Link} to="/products/ultima-go" onClick={handleClose}>Ultima Go</MenuItem>
+          <MenuItem component={Link} to="/products/ultima-prime" onClick={handleClose}>Ultima Prime</MenuItem>
+          <MenuItem component={Link} to="/products/boost-ai" onClick={handleClose}>Boost AI</MenuItem>
+        </Menu>
+        {menuOptions.slice(1).map((item) => (
+          <Button><Link key={item.text} to={item.path}>{item.text}</Link></Button>
         ))}
-       
-        
       </div>
       <div className='navbar-menu-container'>
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -69,7 +103,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton onClick={() => setOpenMenu(false)}>
+                <ListItemButton component={Link} to={item.path} onClick={() => setOpenMenu(false)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>

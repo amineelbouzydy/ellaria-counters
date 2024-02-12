@@ -1,22 +1,32 @@
-import './App.css';
-import Home from './Components/Home';
-import About from './Components/About';
-import Work from './Components/Work';
-import Brands from './Components/Brands';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import "./App.css";
+
+import Layout from './Components/Layout';
+import Nano from './Components/Nano';
+import UltimaGo from './Components/UltimaGo';
+import UltimaAi from './Components/UltimaAi';
+import UltimaPrime from './Components/UltimaPrime';
 
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
-      <About/>
-      <Work/>
-      <Brands />
-      <Contact/>
-      <Footer/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+        <Route path='accueil' element={<div>this is the home page</div>} />
+        <Route path='a-propos' element={<div>this is the home page</div>} />
+        <Route path='avis' element={<div>this is the home page</div>} />
+        <Route path='contact' element={<div>this is the home page</div>} />
+        <Route path='products/nano' element={<Nano />} />
+        <Route path='products/ultima-ai' element={<UltimaAi />}  />
+        <Route path='products/ultima-go' element={<UltimaGo />} />
+        <Route path='products/ultima-prime' element={<UltimaPrime/>} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

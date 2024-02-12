@@ -95,19 +95,6 @@ const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-const Text = styled.div`
-  font-size: 35px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #02203c;
-`;
-
-const Note = styled.div`
-  font-size: 18px;
-  font-weight: 200;
-  margin-bottom: 40px;
-  color: #7c8e9a;
-`;
 
 const Marquee = styled.div`
   display: flex;

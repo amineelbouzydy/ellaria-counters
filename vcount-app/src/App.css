@@ -18,6 +18,9 @@ nav{
   justify-content: space-between;
   min-height: 90px;
 }
+.outlet{
+  padding-inline: 60px;
+}
 .video-container{
   width: 100%;
   padding-top: 100px;
@@ -59,14 +62,27 @@ body {
   display: none;
 }
 .navbar-links-container{
-  width: 40%;
+  width: 50%;
 }
-.navbar-links-container a {
-  margin-right: 3rem;
+.navbar-links-container a  {
+  
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
   font-weight: 600;
+  text-transform: none;
+  width: fit-content;
+}
+.navbar-links-container button  {
+  width: fit-content;
+}
+#fade-button{
+  margin-right: 2rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: none;
 }
 .primary-button {
   padding: 0.9rem 1.75rem;
@@ -146,7 +162,7 @@ body {
 }
 .fixed-button{
   padding: 1rem 2.5rem;
-  background-color: #01a9db;
+  background-color:#6a6a6a;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -174,7 +190,7 @@ body {
   font-size: 1.5rem;
 }
 .fixed-button:hover{
-  background-color: #017ddb;
+  background-color:#515151;
 }
 .secondary-button svg {
   margin-left: 0.75rem;
@@ -385,6 +401,10 @@ body {
 .bigbrandimg{
   width: 20%;
 }
+.acceuil-link{
+  margin-right: 0rem;
+}
+
 .work-section-bottom {
   margin-top: 5rem;
   display: flex;
@@ -408,7 +428,7 @@ body {
   width: 100%;
 }
 @media (max-width: 1000px) {
-  .navbar-links-container a {
+  .navbar-links-container a  {
     margin-right: 1rem;
     font-size: 1rem;
   }
