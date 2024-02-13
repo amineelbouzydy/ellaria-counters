@@ -1,11 +1,11 @@
 import React from "react";
-import BannerBackground from "../Assets/home-banner-background.png";
-import BannerImage from "../Assets/home-banner-image.png";
+import Nanohomebg from "../../Assets/NanoHomebg.png";
+import Nano from "../../Assets/Nano.png";
 
 import { FiArrowRight } from "react-icons/fi";
 
 
-const Home = () => {
+const NanoPresentation = () => {
   
 
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
-          <img src={BannerBackground} alt="" />
+          <img src={Nanohomebg} alt="" />
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
@@ -22,7 +22,7 @@ const Home = () => {
           </h1>
           <p className="primary-text">
           Des solutions de comptage de personnes IoT efficaces, économes en énergie et fiables pour numériser la construction et à améliorer l'efficacité de la gestion de l'espace.          </p>
-          <button className="secondary-button">
+          <button className="nano-demo-button">
           Obtenir une démo <FiArrowRight />{" "}
           </button>
           <button className="fixed-button">
@@ -30,7 +30,7 @@ const Home = () => {
           </button>
         </div>
         <div className="home-image-section">
-          <img src={BannerImage} alt="" className="nanoimage"/>
+          <img src={Nano} alt="" className="nanoimage"/>
         </div>
       </div>
       
@@ -38,4 +38,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default NanoPresentation;

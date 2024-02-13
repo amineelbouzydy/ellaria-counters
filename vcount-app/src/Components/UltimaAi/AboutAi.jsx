@@ -1,25 +1,26 @@
 import React from "react";
-import AboutBackground from "../Assets/about-background.png";
-import AboutBackgroundImage from "../Assets/about-background-image.png";
+import AiAboutbg from "../../Assets/AiAboutbg.png";
+import NanoSmall from "../../Assets/NanoSmall.png";
 import { BsFillPlayCircleFill } from "react-icons/bs";
+import UltimaAi  from "../../Assets/UltimaAi.png";
 
-const About = () => {
+const AboutAi = () => {
 
   const handleWatchVideo = () => {
     window.open('https://www.youtube.com/watch?v=HpymRKApRc8', '_blank');
   };
   return (
-    <div className="about-section-container">
-      <div className="about-background-image-container">
-        <img src={AboutBackground} alt="" className="bg-img"/>
+    <div className="about-section-container-ai">
+      <div className="about-background-image-container-ai">
+        <img src={AiAboutbg} alt="" className="bg-img"/>
       </div>
       <div className="about-section-image-container">
-        <img src={AboutBackgroundImage} alt="" className="nano"/>
+        <img src={UltimaAi} alt="" className="nano"/>
       </div>
       <div className="about-section-text-container">
-        <p className="primary-subheading">A propos</p>
+       
         <h1 className="primary-heading">
-          Nano
+          Ultima Ai
         </h1>
         <p className="primary-text">
         Redéfinir le comptage des personnes avec précision et abordabilité
@@ -28,7 +29,7 @@ const About = () => {
         Adapté à toutes les entreprises, Nano combine facilité d'installation, précision de 99 % avec une application mobile facile à utiliser. Installez commencez à voir vos données.
         </p>
         <div className="about-buttons-container">
-          <button className="secondary-button">Learn More</button>
+          <button className="ai-demo-button">Learn More</button>
           <button className="watch-video-button" onClick={handleWatchVideo}>
             <BsFillPlayCircleFill /> Watch Video
           </button>
@@ -38,4 +39,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutAi;

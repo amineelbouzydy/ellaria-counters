@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "./Slider";
+import Slider from "../Slider";
 import brands from "../Assets/brands.jpg"
 const Brands = () => {
   return (

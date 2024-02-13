@@ -23,15 +23,20 @@ nav{
 }
 .video-container{
   width: 100%;
-  padding-top: 100px;
+  padding-block: 100px;
+  margin-top: 50px;
+  border-radius: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-radius: 30px;
+  background-image: url("./Assets/plain-blue-background.jpg");
   
 }
+.home-image-section-Ai img{
+  width: 600px;
+}
 video{
-  width: 50%;
+  border-radius: 30px;
 }
 img {
   max-width: 100%;
@@ -110,6 +115,11 @@ body {
   display: flex;
   padding-top: 6rem;
 }
+.home-banner-container-ai {
+  position: relative;
+  display: flex;
+  padding-top: 9rem;
+}
 .home-bannerImage-container {
   position: absolute;
   top: 0px;
@@ -144,9 +154,25 @@ body {
   color: #6a6a6a;
   margin: 1.5rem 0rem;
 }
-.secondary-button {
+.nano-demo-button {
   padding: 1rem 2.5rem;
   background-color: #01a9db;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.ai-demo-button {
+  padding: 1rem 2.5rem;
+  background-color: #5246ce;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -206,9 +232,21 @@ body {
   align-items: center;
   justify-content:space-around;
 }
+.about-section-container-ai {
+  margin-top: 15rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
 .about-background-image-container {
   position: absolute;
   left: -200px;
+  z-index: -2;
+}
+.about-background-image-container-ai {
+  position: absolute;
+  left: -360px;
   z-index: -2;
 }
 .bg-img{
@@ -401,9 +439,7 @@ body {
 .bigbrandimg{
   width: 20%;
 }
-.acceuil-link{
-  margin-right: 0rem;
-}
+
 
 .work-section-bottom {
   margin-top: 5rem;

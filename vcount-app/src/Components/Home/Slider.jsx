@@ -1,16 +1,16 @@
 import React from "react";
-import koton from "../Assets/Koton.png";
-import Decathlon from "../Assets/Decathlon.png";
-import Fils from "../Assets/fils.png";
-import birkenstock from "../Assets/birkenstock.png"
-import miniso from "../Assets/Miniso.png"
-import orange from "../Assets/Orange.png"
-import ikea from "../Assets/ikea.png"
-import skechers from "../Assets/Skechers.png"
-import timberland from "../Assets/Timberland.png"
-import yvesrocher from "../Assets/YvesRocher.png"
-import apple from "../Assets/apple.png"
-import crocs from "../Assets/crocs.png"
+import koton from "../../Assets/Koton.png";
+import Decathlon from "../../Assets/Decathlon.png";
+import Fils from "../../Assets/fils.png";
+import birkenstock from "../../Assets/birkenstock.png"
+import miniso from "../../Assets/Miniso.png"
+import orange from "../../Assets/Orange.png"
+import ikea from "../../Assets/ikea.png"
+import skechers from "../../Assets/Skechers.png"
+import timberland from "../../Assets/Timberland.png"
+import yvesrocher from "../../Assets/YvesRocher.png"
+import apple from "../../Assets/apple.png"
+import crocs from "../../Assets/crocs.png"
 import styled, { keyframes, css } from "styled-components";
 
 function Slider() {

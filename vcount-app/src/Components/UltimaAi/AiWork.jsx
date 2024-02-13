@@ -1,38 +1,33 @@
 import React, { useRef, useEffect, useState } from "react";
-import PeopleCounting from "../Assets/Retailstore.png";
-import StaffExclusion from "../Assets/StaffExclusion.png";
-import GroupCounting from "../Assets/Group-Counting.png";
-import QueueManagement from "../Assets/QueueManagement.png";
-import RealTimeOccupancy from "../Assets/RealTime.png";
-import video from "../Assets/video.mp4";
+import PeopleCounting from "../../Assets/AiPeopleCounting.png";
+import DemographicAnalysis from "../../Assets/DemographicAnalysis.png";
+import ZoneAnalytics from "../../Assets/ZoneAnalytics.png";
+import AiQueueManagement from "../../Assets/AiQueueManagement.png";
+
+import video from "../../Assets/video.mp4";
 
 const Work = () => {
   const workInfoData = [
     {
       image: PeopleCounting,
       title: "PeopleCounting",
-      text: "Insights to increase your revenue in 60 days.",
+      text: "Utilisez les données de trafic des clients pour générer des ventes et améliorer les taux de conversion.",
     },
     {
-      image: StaffExclusion,
-      title: "Staff Exclusion",
-      text: "Exclude your staff and achieve more accurate conversion rates.",
+      image: DemographicAnalysis,
+      title: "Demographic Analysis",
+      text: "Connaître l'âge et le sexe de vos clients pour offrir une expérience en fonction de leurs préférences.",
     },
     {
-      image: GroupCounting,
-      title: "GroupCounting",
-      text: "Count groups as one to reach your pure conversion data.",
+      image: ZoneAnalytics,
+      title: "Zone Analytics",
+      text: "L'analyse des zones en magasin vous permet de comprendre le flux de vos visiteurs.",
     },
     {
-      image: QueueManagement,
+      image: AiQueueManagement,
       title: "Queue Management",
-      text: "Monitor queue lengths, send alerts for additional checkouts.",
-    },
-    {
-      image: RealTimeOccupancy,
-      title: "Real-Time Occupancy",
-      text: "Measure Occupancy. Optimize Operations. Lower Energy Costs.",
-    },
+      text: "Une file d'attente et un temps d'attente plus courts améliorent l'expérience client.",
+    }
   ];
 
   const videoRef = useRef(null);
@@ -70,8 +65,7 @@ const Work = () => {
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
-        <p className="primary-subheading">Work</p>
-        <h1 className="primary-heading">How It Works</h1>
+        <h1 className="primary-heading">Ultima AI Solutions</h1>
       </div>
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
@@ -85,7 +79,7 @@ const Work = () => {
         ))}
       </div>
       <div className="video-container">
-        <video ref={videoRef}  height="360" controls autoPlay muted={isMuted}>
+        <video ref={videoRef}  height="360" controls muted={isMuted}>
           <source src={video} type="video/mp4" />
         </video>
       </div>

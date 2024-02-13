@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UltimaAi() {
+function BoostAi() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function UltimaAi() {
   )
 }
 
-export default UltimaAi
+export default BoostAi
