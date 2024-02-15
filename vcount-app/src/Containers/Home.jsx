@@ -1,8 +1,7 @@
 import React from 'react'
 
 
-
-function BoostAi() {
+function Home() {
   return (
     <div>
       
@@ -10,4 +9,4 @@ function BoostAi() {
   )
 }
 
-export default BoostAi
+export default Home

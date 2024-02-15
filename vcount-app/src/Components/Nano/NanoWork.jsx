@@ -6,7 +6,7 @@ import QueueManagement from "../../Assets/QueueManagement.png";
 import RealTimeOccupancy from "../../Assets/RealTime.png";
 import video from "../../Assets/video.mp4";
 
-const AiWork = () => {
+const NanoWork = () => {
   const workInfoData = [
     {
       image: PeopleCounting,
@@ -92,4 +92,4 @@ const AiWork = () => {
   );
 };
 
-export default AiWork;
+export default NanoWork;

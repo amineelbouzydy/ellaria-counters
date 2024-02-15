@@ -1,33 +1,44 @@
 import React, { useRef, useEffect, useState } from "react";
-import PeopleCounting from "../../Assets/AiPeopleCounting.png";
-import DemographicAnalysis from "../../Assets/DemographicAnalysis.png";
-import ZoneAnalytics from "../../Assets/ZoneAnalytics.png";
-import AiQueueManagement from "../../Assets/AiQueueManagement.png";
-
+import PeopleCounting from "../../Assets/Retailstore.png";
+import StaffExclusion from "../../Assets/StaffExclusion.png";
+import GroupCounting from "../../Assets/Group-Counting.png";
+import QueueManagement from "../../Assets/QueueManagement.png";
+import DemographicAnalysis from "../../Assets/DemographicAnalysis2.png";
+import RealTimeOccupancy from "../../Assets/RealTime.png";
 import video from "../../Assets/video.mp4";
 
-const AiWork = () => {
+const GoWork = () => {
   const workInfoData = [
     {
       image: PeopleCounting,
-      title: "PeopleCounting",
+      title: "Compteur de personnes",
       text: "Utilisez les données de trafic des clients pour générer des ventes et améliorer les taux de conversion.",
     },
     {
       image: DemographicAnalysis,
-      title: "Demographic Analysis",
+      title: "Analyse démographique",
       text: "Connaître l'âge et le sexe de vos clients pour offrir une expérience en fonction de leurs préférences.",
     },
     {
-      image: ZoneAnalytics,
-      title: "Zone Analytics",
-      text: "L'analyse des zones en magasin vous permet de comprendre le flux de vos visiteurs.",
+      image: StaffExclusion,
+      title: "Exclusion du personnel",
+      text: "Excluez votre personnel et obtenez des taux de conversion plus précis.",
     },
     {
-      image: AiQueueManagement,
-      title: "Queue Management",
-      text: "Une file d'attente et un temps d'attente plus courts améliorent l'expérience client.",
-    }
+      image: GroupCounting,
+      title: "Comptage de groupe",
+      text: "Comptez les groupes comme un seul personne pour atteindre vos données de conversion pures.",
+    },
+    {
+      image: QueueManagement,
+      title: "Gestion des files d'attente",
+      text: "Surveillez la longueur des files d'attente, envoyez des alertes pour des paiements supplémentaires.",
+    },
+    {
+      image: RealTimeOccupancy,
+      title: "Occupation en temps réel",
+      text: "Mesurer l'occupation. Optimiser les opérations. Coûts énergétiques réduits.",
+    },
   ];
 
   const videoRef = useRef(null);
@@ -87,4 +98,4 @@ const AiWork = () => {
   );
 };
 
-export default AiWork;
+export default GoWork;

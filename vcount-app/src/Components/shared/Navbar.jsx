@@ -68,7 +68,7 @@ const Navbar = () => {
           aria-expanded={open ? 'true' : undefined}
           onClick={handleClick}
         >
-          Products
+          Compteurs de personnes
         </Button>
         <Menu
           id="fade-menu"

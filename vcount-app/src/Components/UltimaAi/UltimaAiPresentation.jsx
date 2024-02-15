@@ -20,7 +20,7 @@ const UltimaAiPresentation = () => {
           Capteur de comptage de personnes precis de 99%
           </h1>
           <p className="primary-text">
-          Ultima AI revolutionizes people counting with AI on CHIP technology, accurately detecting age and gender without recording images, ensuring 100% privacy and market-leading accuracy.          </p>
+          Ultima AI révolutionne le comptage des personnes en détectant avec précision l'âge et le sexe sans enregistrer d'images, garantissant une confidentialité à 100%.       </p>
           <button className="ai-demo-button">
           Obtenir une démo <FiArrowRight />{" "}
           </button>
@@ -29,7 +29,7 @@ const UltimaAiPresentation = () => {
           </button>
         </div>
         <div className="home-image-section-Ai">
-          <img src={UltimaAi} alt="" className="nanoimage"/>
+          <img src={UltimaAi} alt="" className="aiimage"/>
         </div>
       </div>
       

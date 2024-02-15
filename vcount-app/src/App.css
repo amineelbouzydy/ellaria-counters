@@ -120,6 +120,11 @@ body {
   display: flex;
   padding-top: 9rem;
 }
+.home-banner-container-go {
+  position: relative;
+  display: flex;
+  padding-top: 9rem;
+}
 .home-bannerImage-container {
   position: absolute;
   top: 0px;
@@ -127,8 +132,21 @@ body {
   z-index: -2;
   max-width: 800px;
 }
+.home-bannerImage-container-go {
+  position: absolute;
+  top: 0px;
+  right: -250px;
+  z-index: -2;
+  max-width: 800px;
+}
 .nanoimage{
-  margin-top: 60px;
+  margin-top: 100px;
+}
+.aiimage{
+  margin-top: 40px;
+}
+.goimage{
+  margin-top: 10px;
 }
 .home-image-section {
   max-width: 800px;
@@ -173,6 +191,38 @@ body {
 .ai-demo-button {
   padding: 1rem 2.5rem;
   background-color: #5246ce;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.go-demo-button {
+  padding: 1rem 2.5rem;
+  background-color: #43c3c2;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.go-demo-button {
+  padding: 1rem 2.5rem;
+  background-color: #43c3c2;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -260,6 +310,9 @@ body {
 .nano{
   width: 500px;
 }
+.go{
+  width: 600px;
+}
 .about-section-text-container {
   flex: 1;
   justify-content: center;
@@ -323,7 +376,7 @@ body {
   padding: 0.5rem 1rem;
 }
 .footer-wrapper {
-  margin: 6rem 0rem;
+  margin: 3rem 0rem;
   display: flex;
   margin-top: 10rem;
 }
