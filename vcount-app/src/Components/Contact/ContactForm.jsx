@@ -6,9 +6,28 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    //
+
+    try {
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        // Email sent successfully
+        console.log("Email sent successfully");
+      } else {
+        // Error sending email
+        console.error("Error sending email");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -34,7 +53,7 @@ export default function ContactForm() {
         }}
       >
         <Typography variant="h4" align="center" mb={2}>
-          Contacter-Nous
+          Contactez-Nous
         </Typography>
         <form onSubmit={handleSubmit}>
           <TextField
