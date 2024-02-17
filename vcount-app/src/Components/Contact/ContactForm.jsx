@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { TextField, Button, Typography, Box } from "@mui/material";
+import Swal from "sweetalert2";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -15,12 +17,18 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, phone }),
       });
 
       if (response.ok) {
         // Email sent successfully
         console.log("Email sent successfully");
+        Swal.fire({
+          title: "Email sent successfully!",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#017ddb",
+        });
       } else {
         // Error sending email
         console.error("Error sending email");
@@ -46,6 +54,7 @@ export default function ContactForm() {
           alignItems: "center",
           maxWidth: 600,
           mx: "auto",
+          mt: "10%",
           p: 2,
           border: "2px solid  #000000",
           borderRadius: "12px",
@@ -58,7 +67,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit}>
           <TextField
             fullWidth
-            label="Name"
+            label="Nom complet "
             value={name}
             onChange={(e) => setName(e.target.value)}
             margin="normal"
@@ -72,6 +81,15 @@ export default function ContactForm() {
             margin="normal"
             required
             type="email"
+          />
+          <TextField
+            fullWidth
+            label="Téléphone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            margin="normal"
+            required
+            type="tel"
           />
           <TextField
             fullWidth
@@ -95,7 +113,7 @@ export default function ContactForm() {
               },
             }}
           >
-            Submit
+            soumettre
           </Button>
         </form>
       </Box>

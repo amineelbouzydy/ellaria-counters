@@ -453,6 +453,56 @@ body {
 .work-section-wrapper {
   margin-top: 9rem;
 }
+.carousel-section {
+  margin-top: 7rem;
+
+}
+.first-section{
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+.row{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.image-area{
+  
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.text-area{
+  background-image: linear-gradient(to right, rgb(0, 51, 128) , rgb(0, 195, 255));
+  width: 40%;
+  padding: 50px;
+  color: whitesmoke;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.text-area2{
+  background-image: linear-gradient(to right, rgb(245, 245, 245) , rgb(0, 195, 255));
+  width: 40%;
+  padding: 50px;
+  color: rgb(55, 55, 55);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+} 
+.text-area h1{
+  font-size:40px;
+}
+.text-area p{
+  margin-top: 10%;
+  font-size:20px;
+}
+.text-area2 h1{
+  font-size:40px;
+}
+.text-area2 p{
+  margin-top: 10%;
+  font-size:20px;
+}
 .work-section-top p {
   text-align: center;
   max-width: 600px !important;

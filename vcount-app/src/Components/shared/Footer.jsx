@@ -51,7 +51,7 @@ const Footer = () => {
       <Container maxWidth="sm">
         <Typography variant="body2" color="text.secondary" align="center">
           {"Copyright © "}
-          <Link color="inherit" href="https://your-website.com/">
+          <Link color="inherit" href="">
             Ellaria Systems
           </Link>{" "}
           {new Date().getFullYear()}

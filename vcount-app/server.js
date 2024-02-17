@@ -16,7 +16,7 @@ app.use(cors());
 
 // Route to handle form submission and send email
 app.post('/send-email', (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message,phone } = req.body;
 
   // Create a nodemailer transporter
   let transporter = nodemailer.createTransport({
@@ -27,34 +27,58 @@ app.post('/send-email', (req, res) => {
     }
   });
 
+  const emailHtml = `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About People counters</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #0498CF;
+    }
+    
+    p {
+      margin-bottom: 10px;
+    }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <h2>About People counters</h2>
+    <p><strong>Nom complet:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>numéro de téléphone :</strong> ${phone}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  </div>
+  </body>
+  </html>
+  
+  `
   // Define email options
   let mailOptions = {
     from: 'Ellaria Counters <amineelbouzidi36@gmail.com>',
     to: 'amineelbouzidi38@gmail.com',
-    subject: 'New Contact Form Submission',
-    text: `
-      Subject: New Contact Form Submission
-
-Dear [ZAKARIA],
-
-You have received a new message from the contact form on your website. Here are the details:
-
----
-
-Name: ${name}
-Email: ${email}
-
----
-
-Message:
-${message}
-
----
-
-Please respond to this message as soon as possible.
-
-
-    `
+    subject: 'About people counters ',
+    html: emailHtml,
   };
 
   // Send the email
