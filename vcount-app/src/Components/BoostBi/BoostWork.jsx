@@ -1,32 +1,32 @@
 import React, { useRef, useEffect, useState } from "react";
-import PeopleCounting from "../../Assets/AiPeopleCounting.png";
-import DemographicAnalysis from "../../Assets/DemographicAnalysis.png";
-import ZoneAnalytics from "../../Assets/ZoneAnalytics.png";
-import AiQueueManagement from "../../Assets/AiQueueManagement.png";
+import CustomizedKPI from "../../Assets/CustomizedKPI.png";
+import LocationAnalysis from "../../Assets/LocationAnalysis.png";
+import StoreOptimizer from "../../Assets/StoreOptimizer.png";
+import MarketingCampaignAnalysis from "../../Assets/MarketingCampaignAnalysis.png";
 
 import video from "../../Assets/video.mp4";
 
-const AiWork = () => {
+const BoostWork = () => {
   const workInfoData = [
     {
-      image: PeopleCounting,
-      title: "PeopleCounting",
-      text: "Utilisez les données de trafic des clients pour générer des ventes et améliorer les taux de conversion.",
+      image: CustomizedKPI,
+      title: "CUSTOMIZED KPIs",
+      text: "Choisissez parmi plus de 200 KPI pour obtenir un aperçu complet des performances de votre entreprise avec des mesures précieuses.",
     },
     {
-      image: DemographicAnalysis,
-      title: "Demographic Analysis",
-      text: "Connaître l'âge et le sexe de vos clients pour offrir une expérience en fonction de leurs préférences.",
+      image: LocationAnalysis,
+      title: "LOCATION ANALYSIS",
+      text: "Mesurez les performances de différents emplacements grâce à des informations sur toutes les analyses.",
     },
     {
-      image: ZoneAnalytics,
-      title: "Zone Analytics",
-      text: "L'analyse des zones en magasin vous permet de comprendre le flux de vos visiteurs.",
+      image: StoreOptimizer,
+      title: "OPTIMISEUR DE MAGASIN",
+      text: "Planifier le nombre de personnel pour garantir la satisfaction des clients et éviter les pertes de ventes.",
     },
     {
-      image: AiQueueManagement,
-      title: "Queue Management",
-      text: "Une file d'attente et un temps d'attente plus courts améliorent l'expérience client.",
+      image: MarketingCampaignAnalysis,
+      title: "ANALYSE DE CAMPAGNE MARKETING",
+      text: "Évaluez l'efficacité de vos campagnes marketing et suivez le trafic vers votre magasin, y compris celui généré par les annonces sur Google, Meta et TikTok.",
     }
   ];
 
@@ -65,7 +65,7 @@ const AiWork = () => {
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
-        <h1 className="primary-heading">Solutions d'Ultima Ai</h1>
+        <h1 className="primary-heading">BoostBI Solutions</h1>
       </div>
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
@@ -87,4 +87,4 @@ const AiWork = () => {
   );
 };
 
-export default AiWork;
+export default BoostWork;

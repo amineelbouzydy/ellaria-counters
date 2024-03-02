@@ -10,7 +10,7 @@ import Nano from './Containers/Nano';
 import UltimaGo from './Containers/UltimaGo';
 import UltimaAi from './Containers/UltimaAi';
 import UltimaPrime from './Containers/UltimaPrime';
-import BoostAi from './Containers/BoostAi';
+import BoostBi from './Containers/BoostBi';
 import Contact from './Containers/Contact';
 
 
@@ -27,7 +27,7 @@ function App() {
         <Route path='products/ultima-ai' element={<UltimaAi />}  />
         <Route path='products/ultima-go' element={<UltimaGo />} />
         <Route path='products/ultima-prime' element={<UltimaPrime/>} />
-        <Route path='products/boost-ai' element={<BoostAi/>} />
+        <Route path='products/boost-bi' element={<BoostBi/>} />
         </Route>
       </Routes>
     </Router>

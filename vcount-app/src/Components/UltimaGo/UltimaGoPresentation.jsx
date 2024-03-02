@@ -1,7 +1,7 @@
 import React from "react";
 import GoHomebg from "../../Assets/GoHomebg.png";
 import UltimaGo  from "../../Assets/UltimaGo.png";
-
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
 
@@ -22,11 +22,12 @@ const UltimaGoPresentation = () => {
           <p className="primary-text">
           Solutions d'analyse des visiteurs rentables pour les petites et moyennes entreprises et l'industrie du transport dans son ensemble.</p>
           <button className="go-demo-button">
-          Obtenir une démo <FiArrowRight />{" "}
+            <Link to="/contact" className="demo-link">
+              Obtenir une démo
+            </Link>
+            <FiArrowRight />{" "}
           </button>
-          <button className="fixed-button">
-          Obtenir une démo <FiArrowRight />{" "}
-          </button>
+          
         </div>
         <div className="home-image-section-Ai">
           <img src={UltimaGo} alt="" className="goimage"/>

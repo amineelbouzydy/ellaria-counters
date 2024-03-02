@@ -74,7 +74,7 @@ const GoWork = () => {
   }, []);
 
   return (
-    <div className="work-section-wrapper">
+    <section id="gowork" className="work-section-wrapper">
       <div className="work-section-top">
         <h1 className="primary-heading">Solutions d'Ultima Go</h1>
       </div>
@@ -94,7 +94,7 @@ const GoWork = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 

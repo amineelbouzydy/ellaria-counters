@@ -1,6 +1,6 @@
 import React from "react";
-import Nanohomebg from "../../Assets/NanoHomebg.png";
-import Nano from "../../Assets/Nano.png";
+import Boostbg from "../../Assets/backgroundwave.png";
+import BoostBi from "../../Assets/BoostBI.png";
 import { Link } from "react-router-dom";
 
 import { FiArrowRight } from "react-icons/fi";
@@ -9,18 +9,15 @@ const NanoPresentation = () => {
   return (
     <div className="home-container">
       <div className="home-banner-container">
-        <div className="home-bannerImage-container">
-          <img src={Nanohomebg} alt="" />
+        <div className="home-bannerImage-container-boost">
+          <img src={Boostbg} alt="" />
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Compter les personnes: facilite les opérations numériques des
-            entreprises
+            Accédez à vos données d'analyse des visiteurs à tout moment et en tout lieu !
           </h1>
           <p className="primary-text">
-            Des solutions de comptage de personnes IoT efficaces, économes en
-            énergie et fiables pour numériser la construction et à améliorer
-            l'efficacité de la gestion de l'espace.
+          Accédez et visualisez facilement vos mesures de données de trafic avec des rapports personnalisables et obtenez une compréhension complète du comportement de vos clients, de l'entrée à la sortie.
           </p>
           <button className="nano-demo-button">
             <Link to="/contact" className="demo-link">
@@ -30,7 +27,7 @@ const NanoPresentation = () => {
           </button>
         </div>
         <div className="home-image-section">
-          <img src={Nano} alt="" className="nanoimage" />
+          <img src={BoostBi} alt="" className="nanoimage" />
         </div>
       </div>
     </div>

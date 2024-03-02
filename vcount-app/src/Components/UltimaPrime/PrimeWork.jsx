@@ -1,33 +1,38 @@
 import React, { useRef, useEffect, useState } from "react";
-import PeopleCounting from "../../Assets/AiPeopleCounting.png";
-import DemographicAnalysis from "../../Assets/DemographicAnalysis.png";
-import ZoneAnalytics from "../../Assets/ZoneAnalytics.png";
-import AiQueueManagement from "../../Assets/AiQueueManagement.png";
-
+import Heatmap from "../../Assets/PrimeHeatMap.png";
+import ZoneAnalytics from "../../Assets/PrimeZoneAnalytics.png";
+import VisitorCount from "../../Assets/PrimeVisitorCount.png";
+import DwellTime from "../../Assets/PrimeDwellTime.png";
+import VisitorFlow from "../../Assets/PrimeVisitorFlow.png";
 import video from "../../Assets/video.mp4";
 
-const AiWork = () => {
+const GoWork = () => {
   const workInfoData = [
     {
-      image: PeopleCounting,
-      title: "PeopleCounting",
-      text: "Utilisez les données de trafic des clients pour générer des ventes et améliorer les taux de conversion.",
-    },
-    {
-      image: DemographicAnalysis,
-      title: "Demographic Analysis",
-      text: "Connaître l'âge et le sexe de vos clients pour offrir une expérience en fonction de leurs préférences.",
+      image: Heatmap,
+      title: "Carte thermique",
+      text: "La carte thermique d'Ultima Prime montre où les clients passent le plus de temps dans votre magasin.",
     },
     {
       image: ZoneAnalytics,
-      title: "Zone Analytics",
-      text: "L'analyse des zones en magasin vous permet de comprendre le flux de vos visiteurs.",
+      title: "Analyse de zones",
+      text: "L'analyse de zones améliore les activités marketing, les opérations en magasin et l'expérience client.",
     },
     {
-      image: AiQueueManagement,
-      title: "Queue Management",
-      text: "Une file d'attente et un temps d'attente plus courts améliorent l'expérience client.",
-    }
+      image: VisitorCount,
+      title: "Zone Analytics Visitor Count",
+      text: "Ultima Prime compte et analyse le trafic dans chaque rayon du magasin.",
+    },
+    {
+      image: DwellTime,
+      title: "Temps d'arrêt",
+      text: "Comptez les groupes comme un seul personne pour atteindre vos données de conversion pures.",
+    },
+    {
+      image: VisitorFlow,
+      title: "Flux de visiteurs",
+      text: "Découvrez les chemins les plus et les moins populaires dans votre magasin.",
+    },
   ];
 
   const videoRef = useRef(null);
@@ -63,9 +68,9 @@ const AiWork = () => {
   }, []);
 
   return (
-    <div className="work-section-wrapper">
+    <section id="primework" className="work-section-wrapper">
       <div className="work-section-top">
-        <h1 className="primary-heading">Solutions d'Ultima Ai</h1>
+        <h1 className="primary-heading">Solutions d'Ultima Prime</h1>
       </div>
       <div className="work-section-bottom">
         {workInfoData.map((data) => (
@@ -83,8 +88,8 @@ const AiWork = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default AiWork;
+export default GoWork;
