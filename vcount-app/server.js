@@ -76,7 +76,7 @@ app.post('/send-email', (req, res) => {
   // Define email options
   let mailOptions = {
     from: 'Ellaria Counters <amineelbouzidi36@gmail.com>',
-    to: 'amineelbouzidi38@gmail.com',
+    to: 'amine.elbouzidi@arkx.academy',
     subject: 'About people counters ',
     html: emailHtml,
   };

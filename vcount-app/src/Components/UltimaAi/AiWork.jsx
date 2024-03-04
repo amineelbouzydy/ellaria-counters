@@ -63,7 +63,7 @@ const AiWork = () => {
   }, []);
 
   return (
-    <div className="work-section-wrapper">
+    <section id="aiwork" className="work-section-wrapper">
       <div className="work-section-top">
         <h1 className="primary-heading">Solutions d'Ultima Ai</h1>
       </div>
@@ -83,7 +83,7 @@ const AiWork = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 

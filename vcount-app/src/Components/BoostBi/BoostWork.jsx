@@ -63,7 +63,7 @@ const BoostWork = () => {
   }, []);
 
   return (
-    <div className="work-section-wrapper">
+    <section id="boostbiwork" className="work-section-wrapper">
       <div className="work-section-top">
         <h1 className="primary-heading">BoostBI Solutions</h1>
       </div>
@@ -83,7 +83,7 @@ const BoostWork = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -18,10 +18,12 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
+  const [openSubMenu, setOpenSubMenu] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -30,12 +32,26 @@ const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  const toggleSubMenu = (e) => {
+    e.stopPropagation();
+    setOpenSubMenu(!openSubMenu);
+  };
   const menuOptions = [
     {
       text: "Accueil",
       icon: <HomeIcon />,
       path: "/",
+    },
+    {
+      text: 'Products',
+      icon: openSubMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />,
+      subOptions: [
+        { text: 'Nano', path: '/products/nano' },
+        { text: 'Ultima Ai', path: '/products/ultima-ai' },
+        { text: 'Ultima Go', path: '/products/ultima-go' },
+        { text: 'Ultima Prime', path: '/products/ultima-prime' },
+        { text: 'Boost Bi', path: '/products/boost-bi' }
+      ]
     },
     {
       text: "A propos",
@@ -131,29 +147,43 @@ const Navbar = () => {
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
-        <Box
-          sx={{ width: 250 }}
-          role="presentation"
-          onClick={() => setOpenMenu(false)}
-          onKeyDown={() => setOpenMenu(false)}
-        >
-          <List>
-            {menuOptions.map((item) => (
-              <ListItem key={item.text} disablePadding>
-                <ListItemButton
-                  component={Link}
-                  to={item.path}
-                  onClick={() => setOpenMenu(false)}
-                >
+      <Box
+        sx={{ width: 250 }}
+        role="presentation"
+        onClick={() => setOpenMenu(false)}
+        onKeyDown={() => setOpenMenu(false)}
+      >
+        <List>
+          {menuOptions.map((item) => (
+            <React.Fragment key={item.text}>
+              <ListItem disablePadding>
+                <ListItemButton onClick={(e) => item.subOptions && toggleSubMenu(e)}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>
               </ListItem>
-            ))}
-          </List>
-          <Divider />
-        </Box>
-      </Drawer>
+              {item.subOptions && openSubMenu && (
+                <List disablePadding>
+                  {item.subOptions.map((subItem) => (
+                    <ListItem key={subItem.text} disablePadding>
+                      <ListItemButton
+                        component={Link}
+                        to={subItem.path}
+                        onClick={() => setOpenMenu(false)}
+                      >
+                        <ListItemIcon>{subItem.icon}</ListItemIcon>
+                        <ListItemText primary={subItem.text} />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
+              )}
+              <Divider />
+            </React.Fragment>
+          ))}
+        </List>
+      </Box>
+    </Drawer>
     </nav>
   );
 };

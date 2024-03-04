@@ -518,8 +518,6 @@ body {
 .first-section{
   display: flex;
   flex-direction: row;
-  
-  
 }
 .content{
   width: 100%;
@@ -624,7 +622,7 @@ body {
 .brands-slider{
   width: 100%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .navbar-links-container   {
     width: fit-content;
   }
@@ -638,17 +636,36 @@ body {
 }
 .first-section{
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
 }
 .content{
-  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction:column;
+  align-items: center;
+  max-width: min-content;
 }
 .image-area{
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  width: 90vw;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
+.text-area{
+  background-image: linear-gradient(to right, rgb(0, 51, 128) , rgb(0, 195, 255));
+  width: 100%;
+  padding: 40px;
+  color: whitesmoke;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.text-area2{
+  background-image: linear-gradient(to right , rgb(0, 195, 255), rgb(0, 195, 255));
+  width: 100%;
+  padding: 40px;
+  color: rgb(55, 55, 55);
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+} 
 #fade-button{
   margin-right: 0.5rem;
   text-decoration: none;
@@ -701,6 +718,11 @@ body {
   
 }
 @media (max-width: 800px) {
+  .image-area{
+    width: 78vw;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
   .nav-logo-container {
     max-width: 130px;
   }
@@ -820,4 +842,18 @@ body {
     max-width: 95vw;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

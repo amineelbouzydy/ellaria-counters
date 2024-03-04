@@ -10,28 +10,28 @@ const NanoWork = () => {
   const workInfoData = [
     {
       image: PeopleCounting,
-      title: "PeopleCounting",
-      text: "Insights to increase your revenue in 60 days.",
+      title: "Comptage de personnes",
+      text: "Idées pour augmenter vos revenus en 60 jours.",
     },
     {
       image: StaffExclusion,
-      title: "Staff Exclusion",
-      text: "Exclude your staff and achieve more accurate conversion rates.",
+      title: "Exclusion du personnel",
+      text: "Exclure votre personnel et obtenir des taux de conversion plus précis.",
     },
     {
       image: GroupCounting,
-      title: "GroupCounting",
-      text: "Count groups as one to reach your pure conversion data.",
+      title: "Comptage de groupe",
+      text: "Comptez les groupes comme un seul personne pour obtenir vos données de conversion réelles.",
     },
     {
       image: QueueManagement,
-      title: "Queue Management",
-      text: "Monitor queue lengths, send alerts for additional checkouts.",
+      title: "Gestion de file d'attente",
+      text: "Surveiller les longueurs de file d'attente, envoyer des alertes pour des caisses supplémentaires.",
     },
     {
       image: RealTimeOccupancy,
-      title: "Real-Time Occupancy",
-      text: "Measure Occupancy. Optimize Operations. Lower Energy Costs.",
+      title: "Occupation en temps réel",
+      text: "Mesurer l'occupation. Optimiser les opérations. Réduire les coûts énergétiques.",
     },
   ];
 
@@ -68,7 +68,7 @@ const NanoWork = () => {
   }, []);
 
   return (
-    <div className="work-section-wrapper">
+    <section id="nanowork" className="work-section-wrapper">
       <div className="work-section-top">
         <h1 className="primary-heading">Nano Solutions</h1>
       </div>
@@ -88,7 +88,7 @@ const NanoWork = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -24,7 +24,7 @@ class HeroSection extends React.Component {
         <Slider {...settings} className='carousel-section'>
           <div className='first-section'>
             <div className='content'>
-            <div >
+            <div className='image-area'>
               <img src={image3} className='image-area' alt="" />
             </div>
             <div className='text-area'>
@@ -47,7 +47,7 @@ class HeroSection extends React.Component {
               <p>
               La personnalisation est la clé du succès, et V-Count vous offre la solution pour exploiter la puissance des données démographiques en temps réel pour vos publicités.              </p>
             </div>
-            <div >
+            <div className='image-area'>
               <img src={image2} className='image-area' alt="" />
             </div>
             
