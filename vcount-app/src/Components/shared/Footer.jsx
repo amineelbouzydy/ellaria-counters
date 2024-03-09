@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="footer-logo-container">
             <img src={Logo} alt="" />
           </div>
-          <div className="footer-icons">
+          <div className=" footer-icons ">
             <a href="https://www.linkedin.com/company/ellaria-systems/" target="_blank" rel="noopener noreferrer">
               <SiLinkedin />
             </a>

@@ -452,11 +452,13 @@ body {
 }
 .footer-icons {
   margin-top: 2.5rem;
+  display: flex;
 }
 .footer-icons svg {
   font-size: 1.5rem;
   margin-right: 1.25rem;
   color: #585858;
+  
 }
 /* .footer-section-one {
   border: 2px solid blue;
