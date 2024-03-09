@@ -20,6 +20,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Fade from "@mui/material/Fade";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -43,8 +44,8 @@ const Navbar = () => {
       path: "/",
     },
     {
-      text: 'Products',
-      icon: openSubMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />,
+      text: 'Compteurs de personnes',
+      icon: <PeopleAltIcon />,
       subOptions: [
         { text: 'Nano', path: '/products/nano' },
         { text: 'Ultima Ai', path: '/products/ultima-ai' },
@@ -137,7 +138,7 @@ const Navbar = () => {
             BoostBi
           </MenuItem>
         </Menu>
-        {menuOptions.slice(1).map((item) => (
+        {menuOptions.slice(2).map((item) => (
           <Button key={item.text}>
             <Link to={item.path }>{item.text}</Link>
           </Button>
@@ -154,34 +155,48 @@ const Navbar = () => {
         onKeyDown={() => setOpenMenu(false)}
       >
         <List>
-          {menuOptions.map((item) => (
-            <React.Fragment key={item.text}>
-              <ListItem disablePadding>
-                <ListItemButton onClick={(e) => item.subOptions && toggleSubMenu(e)}>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
-              </ListItem>
-              {item.subOptions && openSubMenu && (
-                <List disablePadding>
-                  {item.subOptions.map((subItem) => (
-                    <ListItem key={subItem.text} disablePadding>
-                      <ListItemButton
-                        component={Link}
-                        to={subItem.path}
-                        onClick={() => setOpenMenu(false)}
-                      >
-                        <ListItemIcon>{subItem.icon}</ListItemIcon>
-                        <ListItemText primary={subItem.text} />
-                      </ListItemButton>
-                    </ListItem>
-                  ))}
-                </List>
-              )}
-              <Divider />
-            </React.Fragment>
+  {menuOptions.map((item) => (
+    <React.Fragment key={item.text}>
+      <ListItem disablePadding>
+        {/* Conditionally render ListItemButton without Link for items with subOptions */}
+        {item.subOptions ? (
+          <ListItemButton onClick={(e) => item.subOptions && toggleSubMenu(e)}>
+            <ListItemIcon>{item.icon}</ListItemIcon>
+            <ListItemText primary={item.text} />
+            {item.subOptions && (openSubMenu ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
+          </ListItemButton>
+        ) : (
+          <ListItemButton
+            component={Link}
+            to={item.path}
+            onClick={() => setOpenMenu(false)}
+          >
+            <ListItemIcon>{item.icon}</ListItemIcon>
+            <ListItemText primary={item.text} />
+          </ListItemButton>
+        )}
+      </ListItem>
+      {item.subOptions && openSubMenu && (
+        <List disablePadding>
+          {item.subOptions.map((subItem) => (
+            <ListItem key={subItem.text} disablePadding>
+              <ListItemButton
+                component={Link}
+                to={subItem.path}
+                onClick={() => setOpenMenu(false)}
+              >
+                <ListItemIcon>{subItem.icon}</ListItemIcon>
+                <ListItemText primary={subItem.text} />
+              </ListItemButton>
+            </ListItem>
           ))}
         </List>
+      )}
+      <Divider />
+    </React.Fragment>
+  ))}
+</List>
+
       </Box>
     </Drawer>
     </nav>

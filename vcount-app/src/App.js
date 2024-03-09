@@ -12,6 +12,8 @@ import UltimaAi from './Containers/UltimaAi';
 import UltimaPrime from './Containers/UltimaPrime';
 import BoostBi from './Containers/BoostBi';
 import Contact from './Containers/Contact';
+import AboutUs from './Containers/AboutUs';
+import Avis from './Containers/Avis';
 
 
 function App() {
@@ -20,8 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='a-propos' element={<div>this is the home page</div>} />
-        <Route path='avis' element={<div>this is the home page</div>} />
+        <Route path='a-propos' element={<AboutUs />} />
+        <Route path='avis' element={<Avis />} />
         <Route path='contact' element={<Contact />} />
         <Route path='products/nano' element={<Nano />} />
         <Route path='products/ultima-ai' element={<UltimaAi />}  />
