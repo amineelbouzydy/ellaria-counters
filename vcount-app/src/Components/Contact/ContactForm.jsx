@@ -12,14 +12,23 @@ export default function ContactForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      let uri = "";
+      if ((window.location.origin).includes(":3000"))
+      {
+          uri = "http://localhost:5000/send-email"
+      }
+      else {
+        uri = window.location.origin+"/send-email";
+      }
+      
+      const response = await fetch(uri, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ name, email, message, phone }),
       });
-
+ 
       if (response.ok) {
         // Email sent successfully
         console.log("Email sent successfully");
@@ -44,7 +53,7 @@ export default function ContactForm() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
+        height: "auto",
       }}
     >
       <Box
@@ -52,9 +61,10 @@ export default function ContactForm() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          maxWidth: 600,
+          maxWidth: "60%",
           mx: "auto",
           mt: "10%",
+          mb: "10%",
           p: 2,
           border: "2px solid  #000000",
           borderRadius: "12px",

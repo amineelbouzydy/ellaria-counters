@@ -1,67 +1,56 @@
-import React from "react";
-import Logo from "../../Assets/logo.png";
-import { SiLinkedin } from "react-icons/si";
+import React from 'react';
 import { FaFacebookF } from "react-icons/fa";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
-import { Box } from "@mui/material";
+import { FaInstagram } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa6";
 
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-wrapper">
-        <div className="footer-section-one">
-          <div className="footer-logo-container">
-            <img src={Logo} alt="" />
-          </div>
-          <div className=" footer-icons ">
-            <a href="https://www.linkedin.com/company/ellaria-systems/" target="_blank" rel="noopener noreferrer">
-              <SiLinkedin />
-            </a>
-            <a href="https://www.facebook.com/ELLARIASYSTEMS" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF />
-            </a>
-          </div>
-        </div>
-        <div className="footer-section-two">
-          <div className="footer-section-columns">
-            <span>Quality</span>
-            <span>Testimonials</span>
-            <span>Work</span>
-          </div>
-          <div className="footer-section-columns">
-            <span>05235-64821</span>
-            <span>info@ellariasystems.com</span>
-          </div>
-          <div className="footer-section-columns">
-            <span>Terms & Conditions</span>
-            <span>Privacy Policy</span>
-          </div>
+  <footer className="footer bg-cyan-200 text-center text-white ">
+    <div className=" pt-9 w-full">
+      <div className="mb-1 w-full flex justify-center ">
+        <div className='w-3/5 md:w-1/4 flex '>
+        <a className="w-1/4 flex justify-center  text-xl text-neutral-800 dark:text-neutral-200">
+        <FaFacebookF />
+        </a>
+        <a className="w-1/4 flex justify-center  text-xl text-neutral-800 dark:text-neutral-200">
+        <FaInstagram />
+        </a>
+        <a className="w-1/4 flex justify-center text-xl text-neutral-800 dark:text-neutral-200">
+        <FaLinkedinIn />
+        </a>
+        <a className="w-1/4 flex justify-center text-xl text-neutral-800 dark:text-neutral-200">
+        <FaWhatsapp />
+        </a>
         </div>
       </div>
-      <Box
-      sx={{
-        backgroundColor: ('#01a9db'),
-        p: 6,
-      }}
-      component="footer"
-    >
-      <Container maxWidth="sm">
-        <Typography variant="body2" color="text.secondary" align="center">
-          {"Copyright © "}
-          <Link color="inherit" href="">
-            Ellaria Systems
-          </Link>{" "}
-          {new Date().getFullYear()}
-          {"."}
-        </Typography>
-      </Container>
-    </Box>
     </div>
-
+    <div
+      className="bg-neutral-300 p-3 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+      Email:
+      <a
+        className="text-neutral-800 dark:text-neutral-400"
+        href="https://tw-elements.com/"
+      > info@ellariasystems.com</a>
+    </div>
+    <div
+      className="bg-neutral-300 pb-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+      Fix:
+      <a
+        className="text-neutral-800 dark:text-neutral-400"
+        href="https://tw-elements.com/"
+      > 05235-64821</a>
+    </div>
+    
+    {/* <!--Copyright section--> */}
+    <div
+      className="bg-neutral-300 p-4 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
+      © 2023 Copyright:
+      <a
+        className="text-neutral-800 dark:text-neutral-400"
+        href="https://tw-elements.com/"
+      >TW Elements</a>
+    </div>
+  </footer>
   );
-};
-
-export default Footer;
+}

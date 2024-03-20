@@ -48,11 +48,7 @@ export default function Avis() {
                                 </svg>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-center mt-10">
-                            <img src="https://i.ibb.co/ZgF5Zzz/avatar-1.png" alt="profile pictre" className="w-12 h-12" />
-                            <p className="text-base font-semibold leading-4 my-2 text-gray-800">Tom Koch</p>
-                            <p className="text-base leading-4 text-center text-gray-600">Developer</p>
-                        </div>
+                        
                     </div>
                     <div>
                         <div className="group w-full bg-white relative flex flex-col items-center hover:bg-indigo-700 cursor-pointer shadow-md md:p-12 p-6">
@@ -95,11 +91,7 @@ export default function Avis() {
                                 </svg>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-center mt-10">
-                            <img src="https://i.ibb.co/8BLjmqz/avatar-2.png" alt="profile pictre" className="w-12 h-12" />
-                            <p className="text-base font-semibold leading-4 my-2 text-gray-800">Alan Max</p>
-                            <p className="text-base leading-4 text-center text-gray-600">Designer</p>
-                        </div>
+                        
                     </div>
                     <div>
                         <div className="group w-full bg-white relative flex flex-col items-center hover:bg-indigo-700 cursor-pointer shadow-md md:p-12 p-6">
@@ -142,11 +134,7 @@ export default function Avis() {
                                 </svg>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-center mt-10">
-                            <img src="https://i.ibb.co/y0KCX7p/avatar-3.png" alt="profile pictre" className="w-12 h-12" />
-                            <p className="text-base font-semibold leading-4 my-2 text-gray-800">Kera Joo</p>
-                            <p className="text-base leading-4 text-center text-gray-600">Support</p>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

@@ -4,7 +4,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import image1 from '../../Assets/image1.jpg'
 import image2 from '../../Assets/image2.jpg'
-import image3 from '../../Assets/image3.gif'
+import image3 from '../../Assets/image3.png'
 
 class HeroSection extends React.Component {
     render() {
@@ -45,7 +45,7 @@ class HeroSection extends React.Component {
                 Analysez, ciblez, vendez plus !
               </h1>
               <p>
-              La personnalisation est la clé du succès, et V-Count vous offre la solution pour exploiter la puissance des données démographiques en temps réel pour vos publicités.              </p>
+              La personnalisation est la clé du succès, et V-Count vous offre la solution pour exploiter la puissance des données démographiques en temps réel pour vos publicités. </p>
             </div>
             <div className='image-area'>
               <img src={image2} className='image-area' alt="" />
