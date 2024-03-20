@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "npm run build"
+    "build": "npm run build",
+    "test": "npm run test",
+    "eject": "npm run eject"
   },
   "author": "",
   "license": "ISC",
