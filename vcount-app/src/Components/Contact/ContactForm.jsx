@@ -12,19 +12,11 @@ export default function ContactForm() {
     e.preventDefault();
 console.log(window.location.origin);
     try {
-      let uri = "";
-      // Define the string
-let str = window.location.origin;
+      
+    
 
-// Define the characters to check for
-let charactersToCheckFor = ":3000";
-
-// Check if the string contains any of the specified characters
-if (charactersToCheckFor.split('').some(char => str.includes(char))) {
-  uri = "http://localhost:5000/send-email"
-} else {
   uri = window.location.origin+"/send-email";
-}
+
       
       
       const response = await fetch(uri, {
