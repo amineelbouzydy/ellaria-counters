@@ -15,7 +15,7 @@ console.log(window.location.origin);
       
     
 
-  uri = window.location.origin+"/send-email";
+  let uri = window.location.origin+"/send-email";
 
       
       
