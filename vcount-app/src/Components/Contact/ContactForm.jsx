@@ -10,16 +10,22 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+console.log(window.location.origin);
     try {
       let uri = "";
-      if ((window.location.origin).includes(":3000"))
-      {
-          uri = "http://localhost:5000/send-email"
-      }
-      else {
-        uri = window.location.origin+"/send-email";
-      }
+      // Define the string
+let str = window.location.origin;
+
+// Define the characters to check for
+let charactersToCheckFor = ":3000";
+
+// Check if the string contains any of the specified characters
+if (charactersToCheckFor.split('').some(char => str.includes(char))) {
+  uri = "http://localhost:5000/send-email"
+} else {
+  uri = window.location.origin+"/send-email";
+}
+      
       
       const response = await fetch(uri, {
         method: "POST",
