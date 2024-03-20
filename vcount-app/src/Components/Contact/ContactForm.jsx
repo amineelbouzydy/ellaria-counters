@@ -15,11 +15,11 @@ console.log(window.location.origin);
       
     
 
-  let uri = window.location.origin+"/send-email";
+  
 
       
       
-      const response = await fetch(uri, {
+      const response = await fetch("https://ellaria-backend.onrender.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
