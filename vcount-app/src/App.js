@@ -12,8 +12,9 @@ import UltimaAi from './Containers/UltimaAi';
 import UltimaPrime from './Containers/UltimaPrime';
 import BoostBi from './Containers/BoostBi';
 import Contact from './Containers/Contact';
-import AboutUs from './Containers/AboutUs';
 import Avis from './Containers/Avis';
+import Blog from './Containers/Blog';
+import Supporttechnique from './Containers/Supporttechnique';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path='a-propos' element={<AboutUs />} />
+        <Route path='blog' element={<Blog />} />
+        <Route path='support-technique' element={<Supporttechnique />} />
         <Route path='avis' element={<Avis />} />
         <Route path='contact' element={<Contact />} />
         <Route path='products/nano' element={<Nano />} />

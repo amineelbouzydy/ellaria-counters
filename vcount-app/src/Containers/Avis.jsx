@@ -64,7 +64,7 @@ export default function Avis() {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <p className="xl:w-80 text-base leading-normal text-center mt-4">The entire experience has changed for us. In the last few years I don’t have to worry about getting the best price/performance. I can’t recommend enough an organization like ELLARIASYSTEMS.</p>
+                                <p className="xl:w-80 text-base leading-normal text-center mt-4">L'ensemble de l'expérience a changé pour nous. Ces dernières années, je n'ai plus à m'inquiéter pour obtenir le meilleur rapport qualité-prix. Je ne saurais trop recommander une organisation comme ELLARIASYSTEMS.</p>
                             </div>
                             <div className="text-white group-hover:text-indigo-700 absolute bottom-0 -mb-6">
                                 <svg width={34} height={28} viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@ export default function Avis() {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <p className="xl:w-80 text-base leading-normal text-center mt-4">When our designs need an expert opinion or approval, I know I can rely on your agency Thank you for all your help-I will be recommending you to everyone</p>
+                                <p className="xl:w-80 text-base leading-normal text-center mt-4">Quand nos conceptions ont besoin d'un avis d'expert ou d'approbation, je sais que je peux compter sur votre agence. Merci pour le support - je vous recommanderai à tout le monde.</p>
                             </div>
                             <div className="text-white group-hover:text-indigo-700 absolute bottom-0 -mb-6">
                                 <svg width={34} height={28} viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">

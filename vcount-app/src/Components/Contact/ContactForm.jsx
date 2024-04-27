@@ -13,13 +13,7 @@ export default function ContactForm() {
 console.log(window.location.origin);
     try {
       
-    
-
-  
-
-      
-      
-      const response = await fetch("https://ellaria-backend.onrender.com/send-email", {
+      const response = await fetch("https://ellariasystems.com//send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,14 +46,17 @@ console.log(window.location.origin);
         alignItems: "center",
         justifyContent: "center",
         height: "auto",
+        
+        
       }}
+      
     >
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          maxWidth: "60%",
+          maxWidth: "50%",
           mx: "auto",
           mt: "10%",
           mb: "10%",
@@ -67,6 +64,15 @@ console.log(window.location.origin);
           border: "2px solid  #000000",
           borderRadius: "12px",
           boxShadow: 1,
+          "@media (max-width: 1200px)": {
+            mt: "20%",
+            maxWidth: "80%",
+          },
+          "@media (max-width: 600px)": {
+            mt: "45%",
+            maxWidth: "100%",
+          }
+          
         }}
       >
         <Typography variant="h4" align="center" mb={2}>
@@ -125,6 +131,7 @@ console.log(window.location.origin);
           </Button>
         </form>
       </Box>
+      
     </Box>
   );
 }
