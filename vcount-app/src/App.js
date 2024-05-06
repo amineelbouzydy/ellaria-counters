@@ -15,6 +15,7 @@ import Contact from './Containers/Contact';
 import Avis from './Containers/Avis';
 import Blog from './Containers/Blog';
 import Supporttechnique from './Containers/Supporttechnique';
+import Tcx900 from './Containers/Tcx900';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='products/ultima-go' element={<UltimaGo />} />
         <Route path='products/ultima-prime' element={<UltimaPrime/>} />
         <Route path='products/boost-bi' element={<BoostBi/>} />
+        <Route path='products/tcx900' element={<Tcx900/>} />
         </Route>
       </Routes>
     </Router>

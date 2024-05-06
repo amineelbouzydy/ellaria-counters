@@ -19,7 +19,7 @@ const Blog = () => {
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={blogimage1}
     >
-      <h2 href='https://www.linkedin.com/posts/ellaria-systems_boostez-vos-ventes-en-magasin-avec-ces-%C3%A9tapes-activity-7161282013583302656-B-LN?utm_source=share&utm_medium=member_desktop' className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
+      <h2  className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
       Boostez vos ventes en magasin avec ces étapes simples !
       </h2>
       <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -32,7 +32,7 @@ const Blog = () => {
       imgSrc={blogimage2}
       
     >
-      <h2 href='https://www.linkedin.com/posts/ellaria-systems_boostez-vos-ventes-en-magasin-avec-ces-%C3%A9tapes-activity-7161282013583302656-B-LN?utm_source=share&utm_medium=member_desktop' className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
+      <h2  className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
       Combien de vos clients entrent dans vos magasins en groupe ?
       </h2>
       <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -44,7 +44,7 @@ const Blog = () => {
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={blogimage3}
     >
-      <h2 href='https://www.linkedin.com/posts/ellaria-systems_boostez-vos-ventes-en-magasin-avec-ces-%C3%A9tapes-activity-7161282013583302656-B-LN?utm_source=share&utm_medium=member_desktop' className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
+      <h2 className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
       Boostez vos ventes EXPLOSION : Analyse démographique précise en 3 étapes !
       </h2>
       <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -56,7 +56,7 @@ const Blog = () => {
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={blogimage4}
     >
-      <h2 href='https://www.linkedin.com/posts/ellaria-systems_boostez-vos-ventes-en-magasin-avec-ces-%C3%A9tapes-activity-7161282013583302656-B-LN?utm_source=share&utm_medium=member_desktop' className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
+      <h2 className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
       Transformez les visites en showroom en ventes gagnantes !💼🌟
       </h2>
       <p className="font-normal text-gray-700 dark:text-gray-400">
@@ -68,7 +68,7 @@ const Blog = () => {
       imgAlt="Meaningful alt text for an image that is not purely decorative"
       imgSrc={blogimage5}
     >
-      <h2 href='https://www.linkedin.com/posts/ellaria-systems_boostez-vos-ventes-en-magasin-avec-ces-%C3%A9tapes-activity-7161282013583302656-B-LN?utm_source=share&utm_medium=member_desktop' className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
+      <h2 className="text-2xl font-bold tracking-tight hover:text-brandPrimary text-gray-900 dark:text-white">
       Imaginez connaître parfaitement le fonctionnement de votre centre commercial ! 🛍️💼
       </h2>
       <p className="font-normal text-gray-700 dark:text-gray-400">

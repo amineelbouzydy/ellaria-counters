@@ -1,4 +1,3 @@
-import { Carousel } from 'flowbite-react'
 import React from 'react'
 import PeopleCountingHome from '../../Assets/people-counting-home.svg'
 

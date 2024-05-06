@@ -33,6 +33,20 @@ export const navItems = [{
             title: "Caisses",
             submenu: [{
                 title: "Toshiba",
+                submenu: [
+                    {
+                        title: "TCx® 900",
+                        path: '/products/tcx900'
+                    },
+                    {
+                        title: "TCx® 810",
+                        
+                    },
+                    {
+                        title: "TCx® 810E",
+                        
+                    },
+            ]
             },
             {
                 title: "Wincor",

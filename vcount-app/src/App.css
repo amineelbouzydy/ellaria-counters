@@ -339,6 +339,17 @@ body {
   justify-content: center;
   
 }
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
 .ai-demo-button {
   padding: 1rem 2.5rem;
   background-color: #5246ce;
